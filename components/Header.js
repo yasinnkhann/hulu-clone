@@ -7,7 +7,7 @@ import {
   UserIcon,
 } from '@heroicons/react/outline';
 import Image from 'next/image';
-import HeaderItem from './HeaderItem';
+import HeaderItem from './HeaderItem.js';
 
 const Header = () => {
   return (

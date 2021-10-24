@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-import Results from "../components/Results";
-import requests from "../utils/requests";
+import Head from 'next/head';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import Results from '../components/Results';
+import requests from '../utils/requests';
 
 //Client render
 export default function Home({ results }) {
@@ -10,7 +10,7 @@ export default function Home({ results }) {
     <div>
       <Head>
         <title>Hulu 2.0</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <Header />
@@ -28,7 +28,7 @@ export async function getServerSideProps(context) {
     `https://api.themoviedb.org/3${
       requests[genre]?.url || requests.fetchTrending.url
     }`
-  ).then((res) => res.json());
+  ).then(res => res.json());
 
   return {
     props: {
